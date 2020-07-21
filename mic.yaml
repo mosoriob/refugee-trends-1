@@ -1,0 +1,28 @@
+step: 1
+name: refugee-trends
+docker_image: refugee-trends:latest
+framework: !!python/object/apply:mic.constants.Framework
+- !!python/tuple
+  - general
+  - mintproject/generic:latest
+parameters:
+  input_file:
+    default_value: Migration_GTrends.csv
+    type: str
+    description: The name of the Google Trends/refugee input file.
+inputs:
+  migration_gtrends_csv:
+    path: Migration_GTrends.csv
+    format: csv
+code_files:
+  model_r:
+    path: model.R
+    format: R
+outputs:
+  rplots_pdf:
+    path: Rplots.pdf
+    format: pdf
+  accuracy_csv:
+    path: accuracy.csv
+    format: csv
+github_repo_url: git@github.com:jataware/refugee-trends.git
