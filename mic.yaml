@@ -25,4 +25,4 @@ outputs:
   accuracy_csv:
     path: accuracy.csv
     format: csv
-github_repo_url: https://github.com/jataware/refugee-trends.git
+github_repo_url: https://github.com/brandomr/refugee-trends.git
